@@ -1,0 +1,12 @@
+.nav {
+    text-align: right;
+}
+header {
+    background-color: darkslategrey;
+}
+article {
+    background-color: dimgray;
+}
+footer {
+    background-color: midnightblue;
+}
