@@ -47,6 +47,11 @@ table {
 	border-spacing: 0;
 }
 /*custom style*/
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
 body {
     font-size: 16px;
     line-height: 1.5;
@@ -62,17 +67,19 @@ body {
 .header {
     background-color: black;
     font-size: 0;
+    line-height: 80px;
     width: 100%;
     position: fixed;
+    top: 0;
 }
 .logo {
     width: 80px;
-    display: inline-block;
+    float: left;
     vertical-align: middle;
 }
 .nav {
     text-align: right;
-    display: inline-block;
+    float: right;
     vertical-align: middle;
     width: calc(100% - 80px);
 }
@@ -82,55 +89,55 @@ body {
     margin-left: 20px;
 }
 .main {
-    padding: 100px 0 20px 0;
-}
-h1 {
-    font-size: 55px;
-    text-align: center;
-}
-.col {
-    text-align: center;
-    background-color: rgb(26,40,75);
     width: 1200px;
+    background-color: rgb(16,101,127);
+    margin: 10px auto;
+    margin-top: 100px;
 }
-.para {
-    width: 800px;
-    margin: 0 auto;
+.head {
+    font-size: 40px;
 }
-.col img {
-    width: 800px;
-    border-radius: 16px;
-}
-.col p {
+.col-para {
+    width: 50%;
+    float: left;
+    line-height: 1.7;
     font-size: 20px;
 }
+.col-img img {
+    width: 50%;
+    float: right;
+    border-radius: 16px;
+}
+.col-img {
+    padding: 70px 0;
+}
+.empty {
+    clear: both;
+}
 .col2 {
-    text-align: center;
-    background-color: rgb(26,40,75);
+    margin: 0 auto;
 }
 .col2 img {
     width: 30.333%;
     height: 250px;
-    border-radius: 14px;
-    margin: 10px 0;
+    margin-left: 20px;
+    border-radius: 16px;
 }
 .footer {
-    padding: 30px;
     background-color: black;
 }
 .btu {
-   background-color:rgb(26,17,183);
-   width: 40px;
-   height: 40px;
-   position: fixed;
-   bottom: 20px;
-   right: 20px;
-   border-radius: 50%;
-   text-decoration: none;
-   font-size: 20px;
+    width: 30px;
+    border-radius: 50%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
 }
 .nav2 a {
     text-decoration: none;
     font-size: 20px;
     margin-left: 20px;
+} 
+.nav2 {
+    padding: 20px 0;
 }
